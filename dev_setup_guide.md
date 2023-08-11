@@ -12,8 +12,7 @@ This architecture allows the user to quickly integrate HTTPS, load balancing, an
 The hope is to push changes to the app quickly, without having to expose the host (hypervisor) to the public internet.  
 
 
-
-section 1: Pre-Requisites and assumptions
+### section 1: Pre-Requisites and assumptions ###
 - Development server running ssh server, and connected to tailscale.
 - required packages/services:
 	- openssh-server
@@ -22,17 +21,17 @@ section 1: Pre-Requisites and assumptions
 - tailscale setup
 	- development server must have 'no exipiry' option selected in Tailscale
 
-Section 2: Dev server setup
+### Section 2: Dev server setup ###
 - generate SSH key for developer user
 - copy SSH key to GitHub as repo secret
 
-Section 3: Docker Compose setup and configuration
+### Section 3: Docker Compose setup and configuration ###
 - example docker compose file
 - example dockerfile
 -
 
-Section 4: Github Action: workflow file setup, and testing
+### Section 4: Github Action: workflow file setup, and testing ###
 - defining a github action workflow.yml file
 - referencing github secrets in workflow file
 
-Section 5: Additional Resources and follow up reading
+### Section 5: Additional Resources and follow up reading ###
