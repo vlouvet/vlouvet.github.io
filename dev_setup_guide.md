@@ -1,16 +1,15 @@
 # GitHub Action CI/CD workflow Setup Guide #
 ## Continuous deployment to a Docker container, protected by Tailscale, and powered by GitHub ##
 
-Introduction: The content of this guide is purely for educational purposes and comes with no warranty whatsoever. 
+Introduction: The content of this guide is purely for educational purposes and comes with no warranty whatsoever.  
+The steps below outline the process of setting up a development workflow that deploys changes to a simple app running on docker.  
 
-The steps below outline the process of setting up a development workflow that deploys changes to a simple app running on docker.
+The docker architecture is a very simple two container setup.   
+First, a simple Python Flask app is created as an example - then an NGINX container is used to proxy requests.  
 
-The docker architecture is a very simple two container setup. 
-First, a simple Python Flask app is created as an example - then an NGINX container is used to proxy requests.
+This architecture allows the user to quickly integrate HTTPS, load balancing, and other features provided by NGINX.  
 
-This architecture allows the user to quickly integrate HTTPS, load balancing, and other features provided by NGINX.
-
-The hope is to push changes to the app quickly, without having to expose the host (hypervisor) to the public internet.
+The hope is to push changes to the app quickly, without having to expose the host (hypervisor) to the public internet.  
 
 
 
