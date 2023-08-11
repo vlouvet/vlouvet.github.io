@@ -1,4 +1,4 @@
-Title: GitHub Action CI/CD workflow Setup Guide
+# GitHub Action CI/CD workflow Setup Guide #
 SubTitle: Continuous deployment to a Docker container, protected by Tailscale, and powered by GitHub
 
 Introduction: The content of this guide is purely for educational purposes and comes with no warranty whatsoever. 
