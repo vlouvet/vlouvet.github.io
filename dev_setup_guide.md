@@ -18,7 +18,8 @@ The hope is to push changes to the app quickly, without having to expose the hos
 	- openssh-server  
 	- docker-compose  
 	- git  
-#### tailscale setup####
+
+#### tailscale setup ####
 - development server must have 'no exipiry' option selected in Tailscale  
 
 ### Section 2: Dev server setup ###
