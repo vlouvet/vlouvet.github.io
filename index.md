@@ -7,7 +7,7 @@ title: Dynamic Links Example
 
 Here are some dynamically generated links to posts:
 
-![Let it flow!](/assets/flow.jpg "Flow")
+![Let it flow!](/docs/assets/flow.jpg "Flow")
 
 <ul>
 {% for post in site.posts %}
