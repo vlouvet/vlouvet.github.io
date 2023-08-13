@@ -7,6 +7,8 @@ title: Dynamic Links Example
 
 Here are some dynamically generated links to posts:
 
+![Let it flow!](/assets/images/flow.jpg "Flow")
+
 <ul>
 {% for post in site.posts %}
   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
