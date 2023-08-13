@@ -1,6 +1,6 @@
 # GitHub Action CI/CD workflow Setup Guide #
 ## Continuous deployment to a Docker container, protected by Tailscale, and powered by GitHub ##
-![Let your development flow!](assets/flow.jpg "=400x300" "riverflow")
+![Let your development flow!](docs/assets/flow.jpg "=400x300" "riverflow")
 Introduction: The content of this guide is purely for educational purposes and comes with no warranty whatsoever.  
 The steps below outline the process of setting up a development workflow that deploys changes to a simple app running on docker.  
 
