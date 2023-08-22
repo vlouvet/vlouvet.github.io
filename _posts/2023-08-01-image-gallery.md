@@ -1,4 +1,4 @@
 - Add image gallery feature
 - move to using markdown instead of raw html
 
-{{ site.baseurl }}{% link index.md %}
+[Home](../index.md)
