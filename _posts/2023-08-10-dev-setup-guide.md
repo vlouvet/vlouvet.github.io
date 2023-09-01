@@ -65,7 +65,7 @@ The hope is to push changes to the app quickly, without having to expose the hos
 4. Generate SSH key for developer user with ssh-keygen [man ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html)
 
 	```ssh-keygen```
-
+![ssh-keygen used to generate a new pub/priv key pair](/docs/assets/ssh-keygen1.png "ssh-keygen-results")
 5. copy SSH key to GitHub as repository secret
  
 ### Section 3: Python App setup ###
