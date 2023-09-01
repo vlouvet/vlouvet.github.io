@@ -24,20 +24,25 @@ The hope is to push changes to the app quickly, without having to expose the hos
 
 
 #### GitHub Setup ####
-1. Create an account at Https://www.github.com, a personal account is free.
+1. Create an account at [https://www.github.com](https://www.github.com), a personal account is free.
 2. Once logged into GitHub, create a new repository, give it a short meaningful name.
 3. Generate a GitHub API Token, store it in a secure place such as a password vault.
 4. Grant the API token workflow permissions, and grant it full access to the repository you created.
 
 
-#### tailscale setup ####
+#### TailScale setup ####
 1. Download and install tailscale on the development server, which will host the docker container(s).
+Follow the instructions here [TailScale Linux Download](https://tailscale.com/download/linux)
 2. Authenticate into your tailnet from the development server.
+``` sudo tailscale login```
+Then, once authenticated, query and record the tailscale IP of the development server
+``` sudo tailscale status```
 3. Tailscale Admin: Disable expiry for development server/hypervisor.
 	- This is a matter of convenience, not recommended for security purposes.
-4. Tailscale Admin: Generate and store a tailscale API token.
-	- make sure to store this API token in a secure place such as a password vault.
-5. Copy tailscale API token into GitHub as a Repository secret.
+4. Tailscale Admin: Generate and store a TailScale Auth Key.
+	- Tailscale Admin -> Settings -> Personal Settings -> Keys
+	- make sure to store this auth key in a secure place such as a password vault.
+5. Copy tailscale auth key into GitHub as a Repository secret.
 	- Navigate to Repo -> Settings -> Security -> Secrets and Variables -> Actions.
 	- Create secrets for TAILSCALE_AUTHKEY, SERVER_IP
 
