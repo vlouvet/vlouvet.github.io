@@ -32,11 +32,15 @@ The hope is to push changes to the app quickly, without having to expose the hos
 
 #### TailScale setup ####
 1. Download and install tailscale on the development server, which will host the docker container(s).
-Follow the instructions here [TailScale Linux Download](https://tailscale.com/download/linux)
+	- Follow the instructions here [TailScale Linux Download](https://tailscale.com/download/linux)
 2. Authenticate into your tailnet from the development server.
+
 ``` sudo tailscale login```
+
 Then, once authenticated, query and record the tailscale IP of the development server
+
 ``` sudo tailscale status```
+
 3. Tailscale Admin: Disable expiry for development server/hypervisor.
 	- This is a matter of convenience, not recommended for security purposes.
 4. Tailscale Admin: Generate and store a TailScale Auth Key.
