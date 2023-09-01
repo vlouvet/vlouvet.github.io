@@ -12,7 +12,7 @@ This architecture allows the user to quickly integrate HTTPS, load balancing, an
 The hope is to push changes to the app quickly, without having to expose the host (hypervisor) to the public internet.  
 
 
-### section 1: Pre-Requisites and assumptions ###
+### section 1: Installing Pre-Requisites ###
 - A GitHub account with GitHub Actions enabled
 - A GitHub repository - to store app source code, workflow files, and authentication credentials
 - A GitHub API token with workflows permission
@@ -20,20 +20,33 @@ The hope is to push changes to the app quickly, without having to expose the hos
 - required packages/services:  
 	- openssh-server  
 	- docker-compose  
-	- git  
+	- git
+
+
+#### GitHub Setup ####
+1. Create an account at Https://www.github.com, a personal account is free.
+2. Once logged into GitHub, create a new repository, give it a short meaningful name.
+3. Generate a GitHub API Token, store it in a secure place such as a password vault.
+4. Grant the API token workflow permissions, and grant it full access to the repository you created.
+
 
 #### tailscale setup ####
-1. Download and install tailscale on the development server / hypervisor
-2. Authenticate into your tailnet
-3. Optional: Disable expiry for development server/hypervisor
-4. Generate and store a tailscale API token
+1. Download and install tailscale on the development server, which will host the docker container(s).
+2. Authenticate into your tailnet from the development server.
+3. Tailscale Admin: Disable expiry for development server/hypervisor.
+	- This is a matter of convenience, not recommended for security purposes.
+4. Tailscale Admin: Generate and store a tailscale API token.
+	- make sure to store this API token in a secure place such as a password vault.
+5. Copy tailscale API token into GitHub as a Repository secret.
+	- Navigate to Repo -> Settings -> Security -> Secrets and Variables -> Actions.
+	- Create secrets for TAILSCALE_AUTHKEY, SERVER_IP
 
 ### Section 2: Dev server setup ###
 - generate SSH key for developer user  
 1. Create a development user, and add them to the appropriate groups.  
-2. Generate a pub/private keypair for the development user.  
-- copy SSH key to GitHub as repository secret  
-1. 
+2. Generate a pub/private keypair for the development user.
+3. copy SSH key to GitHub as repository secret  
+ 
 ### Section 3: Python App setup ###
 - Required python packages
 - virtual environment considerations
@@ -49,3 +62,6 @@ The hope is to push changes to the app quickly, without having to expose the hos
 
 ### Section 6: Additional Resources and follow up reading ###
 - where do we go from here?  
+
+
+
