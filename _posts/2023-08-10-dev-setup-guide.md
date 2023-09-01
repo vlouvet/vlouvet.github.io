@@ -58,15 +58,15 @@ The hope is to push changes to the app quickly, without having to expose the hos
 2. switch into the development user account with su [man su](https://man7.org/linux/man-pages/man1/su.1.html)
 
 	```sudo su devuser```
-3. Generate SSH key for developer user with ssh-keygen [man ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html)
-
-	```ssh-keygen```
-
 3. Add the development user to the appropriate groups with usermod [man usermod]()
 	
 	```sudo usermod -aG docker devuser```
 
-4. copy SSH key to GitHub as repository secret
+4. Generate SSH key for developer user with ssh-keygen [man ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html)
+
+	```ssh-keygen```
+
+5. copy SSH key to GitHub as repository secret
  
 ### Section 3: Python App setup ###
 - Required python packages
