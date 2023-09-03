@@ -17,7 +17,7 @@
 
 
 ## Software Required ##
-1. Linux - Ubuntu 22.04 (Other Linux versions may work)
+1. Linux - Ubuntu 22.04 (Other Linux distributions may work)
 2. ffmpeg
 3. v4l2
 4. vlc
