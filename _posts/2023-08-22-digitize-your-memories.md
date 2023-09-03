@@ -24,9 +24,9 @@
 
 ## setup process ##
 1. Install required tools and libraries
-```
-sudo apt install -y ffmpeg vlc v4l2
-```
+    ```
+    sudo apt install -y ffmpeg vlc v4l2
+    ```
 
 ## Commands Used ##
 1. confirm your computer supports hardware accelerated h264 encoding.
@@ -71,9 +71,7 @@ sudo apt install -y ffmpeg vlc v4l2
 
 
 ## Additional Resources ##
-1. The information in this guide builds upon the resources availabe on the following site: 
-
-[http://www.tedfelix.com/linux/hauppauge-usb-live-2-linux.html](http://www.tedfelix.com/linux/hauppauge-usb-live-2-linux.html)
+1. The information in this guide builds upon the resources availabe on the following site: [http://www.tedfelix.com/linux/hauppauge-usb-live-2-linux.html](http://www.tedfelix.com/linux/hauppauge-usb-live-2-linux.html)
 
 2. ffmpeg configuration options for hardware acceleration can be found at this site: [FFmpeg HWAccel WiKi](https://trac.ffmpeg.org/wiki/HWAccelIntro)
 
