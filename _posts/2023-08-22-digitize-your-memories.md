@@ -33,9 +33,8 @@
     ```
     ffmpeg -hide_banner -encoders | grep h264
     ```
-2. query the v4l2 devices available.
+2. query the v4l2 devices available. (Plug in your capture device into the USB Port first!)
     ```
-    (Plug in your capture device into the USB Port first!)
     v4l2-ctl --list-dev
     ```
 3. Query the device's video standard
