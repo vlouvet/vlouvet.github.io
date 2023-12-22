@@ -9,7 +9,9 @@
 
 ## But What Does that Mean? ##
 
-    In General, the project aims to document how one technology enthusiast was able to help the local community. Projects are funded by marketting technical skills, and repurposing recycled technology.
+    In General, the project aims to document how one technology enthusiast was able to help the local community.
+    
+    Projects are funded by marketing technical skills, and repurposing recycled technology.
 
 ## Requirements ##
 
@@ -18,7 +20,7 @@
 1. 
 
 ## Hardware Used ##
-1. B/W Lazer printer
+1. B/W Laser printer
 2. Thermal label printer (Optional)
 3. Smartphone with Camera, or digital camera
 4. Solid colored sheet
