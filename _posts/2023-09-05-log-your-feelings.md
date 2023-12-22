@@ -2,6 +2,15 @@
 
 ## A simple micro-blogging app meant to be used to be used anonymously ##
 
+### Table of Contents ###
+
+- [Application Features](#features)
+- [Project Summary](#project-summary)
+- [Directory Setup Section](#directory-setup)
+- [Python Library Setup](#python-library-setup)
+- [Application code breakdown](#python-application-code-breakdown)
+- [Complete App.py code](#complete-apppy-python-code)
+
 ### Features: ###
   - Post anonymously, no user account required
   - Posts can include text, tags, feeling category (picklist), and attached images
@@ -28,7 +37,8 @@ We will be using a basic folder structure from the Flask web framework ["Link"] 
   - /Database
   - /templates
   - /tests
-  
+
+
 ### Python Library Setup ###
 
 Create a requirements.txt file at the project root (/dft) and enter the following:
@@ -44,6 +54,8 @@ Next, use pip to install the required libraries
 ```
 python3 -m pip install -r requirements.txt
 ```
+
+### Python Application code breakdown ###
 
 Now we're ready to start creating our app.py file which will receive requests from NGINX. 
 
@@ -73,7 +85,18 @@ db = SQLAlchemy(app)
 
 ```
 
-In this next section, we define all the database tables. Each table contains a number of columns, some tables contain relationships (links) to other tables.
+In this next section, we define some basic database tables. 
+
+Each table includes a name, and one or more columns. The columns must be defined as a specific data type.
+
+
+1. The first table is 'form_entry_tags' which associates the 'form entries' table to the 'tags' table.
+2. The most basic table is 'form_entries' which stores the blog posts made by a user.
+3. Tags are the second most basic table, tags allow a user to add short labels to the form entry before submitting.
+    - Form entries can have many tags.
+4. Categories are the next table, the category table stores the different feelings a user can select when making a form entry.
+    - Form entries can have one, and only one category.
+
 
 ```
 form_entry_tags = db.Table(
@@ -110,7 +133,14 @@ class Category(db.Model):
 
 ```
 
-Next, we define a function that initializes the database. Taking care to not overwrite the database if one exists. Once the database is created, seed values are entered for some tables. at the end of this section we call the init_db function we defined above.
+
+Next, we define a function that initializes the database. 
+
+Taking care to not overwrite the database if one exists.
+
+Once the database is created, seed values are entered for some tables.
+
+At the end of this section we call the init_db function we defined above.
 
 ```
 def init_db():
@@ -127,11 +157,13 @@ def init_db():
 init_db()
 ```
 
-In this code block we define our first Flask application route. This route accepts both GET and POST HTTP requests.
+In this code block we define our first Flask application route.
 
-When POSTing data, a new entry is added to the SQLite3 database, then the browser is re-directed to the entry form.
+This route accepts both GET and POST HTTP requests.
 
 If the user sends a GET request, a Jinja template 'form.html' is rendered.
+
+When POSTing data, a new entry is added to the SQLite3 database, then the browser is re-directed to the entry form.
 
 ```
 
@@ -167,9 +199,16 @@ def form():
         return render_template("form.html", categories=categories)
 ```
 
-Last of all, this code block tells flask to run the application, binding to all available IP addresses, on port 5001
+Last of all, this code block tells flask to run the application, binding to all available IP addresses on the host, using port 5001
 
 ```
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001)
 ```
+
+### Complete app.py Python code ###
+
+```
+test
+```
+[Back to top](#daily-feeling-tracker-app-development-guide)
