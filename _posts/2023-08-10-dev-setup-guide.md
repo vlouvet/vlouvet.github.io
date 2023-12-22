@@ -68,12 +68,7 @@ The hope is to push changes to the app quickly, without having to expose the hos
 ![ssh-keygen used to generate a new pub/priv key pair](/docs/assets/ssh-keygen1.png "ssh-keygen-results")
 5. copy SSH key to GitHub as repository secret
  
-### Section 3: Python App setup ###
-- Required python packages
-- virtual environment considerations
-- gunicorn server VS uWSGI
-
-### Section 4: Docker Compose setup and configuration ###
+### Section 3: Docker Compose setup and configuration ###
 - example docker compose file  
 - example dockerfile  
 
