@@ -430,4 +430,12 @@ Explanation of command options:
 - '-b 0.0.0.0:5001' bind to all IP addresses, on port 5001
 - 'app:app' run the application named 'app.py' from the current working directory
 
+With this command running, our python application is being served on port 5001 and should be accessible using a web browser.
+
+### Where do we go from here? ###
+
+This blog will expand on the functionality of the Flask application in a separate post.
+
+If you are interested to learn how to dockerize, deploy, and maintain this application on a production server, visit our docker blog post [here.](2023-08-10-dev-setup-guide.md)
+
 [Back to top](#daily-feeling-tracker-app-development-guide)
