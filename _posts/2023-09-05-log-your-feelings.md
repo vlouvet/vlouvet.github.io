@@ -321,8 +321,7 @@ Create a file 'base.html' in the templates folder folder example: /dft/templates
 
 The contents of the base.html file should be as follows:
 
-```
-  <!DOCTYPE html>
+```<!DOCTYPE html>
   <html>
     <head>
       <title>{% block title %}Daily Feelings Tracker{% endblock %}</title>
@@ -364,39 +363,40 @@ Create a file 'form.html' in the templates folder folder example: /dft/templates
 The template file should contain the following code:
 
 ```
-{% extends "base.html" %}
 
-{% block content %}
-<div class="container mt-4">
-    <h1>Instant Feeling Tracker Form</h1>
-    <form method="post" class="form" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="category">Current Feeling:</label>
-            <select name="category" class="form-control">
-              {% for option in categories %}
-                <option value="{{ option.id }}">{{ option.label }}</option>
-              {% endfor %}
-            </select>
+  {% extends "base.html" %}
+
+  {% block content %}
+  <div class="container mt-4">
+      <h1>Instant Feeling Tracker Form</h1>
+      <form method="post" class="form" enctype="multipart/form-data">
+          <div class="form-group">
+              <label for="category">Current Feeling:</label>
+              <select name="category" class="form-control">
+                {% for option in categories %}
+                  <option value="{{ option.id }}">{{ option.label }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          <div class="form-group">
+              <label for="image">Upload Image:</label>
+              <input type="file" name="image" class="form-control" accept="image/*" />
           </div>
-        <div class="form-group">
-            <label for="image">Upload Image:</label>
-            <input type="file" name="image" class="form-control" accept="image/*" />
-        </div>
-        <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea name="message" class="form-control form-control-lg"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="tags">Tag your feelings:</label>
-            <input type="text" name="tags" class="form-control" />
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Submit" class="btn btn-primary" />
-        </div>
-    </form>
-    <a href="/entries" class="btn btn-secondary">View Previous Entries</a>
-</div>
-{% endblock %}
+          <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea name="message" class="form-control form-control-lg"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="tags">Tag your feelings:</label>
+              <input type="text" name="tags" class="form-control" />
+          </div>
+          <div class="form-group">
+              <input type="submit" value="Submit" class="btn btn-primary" />
+          </div>
+      </form>
+      <a href="/entries" class="btn btn-secondary">View Previous Entries</a>
+  </div>
+  {% endblock %}
 ```
 As you can see, Jinja allows passing and rendering variables from the python code in HTML which is then consumed by a web browser.
 
