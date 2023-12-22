@@ -1,4 +1,4 @@
-### Intermediate Flask Functionality ###
+## Intermediate Flask Functionality ##
 
 #### Table of Contents ####
 
@@ -10,16 +10,22 @@
 - [Adding Global Search](#part-4-adding-global-search-functionality)
 - [Conclusion](#next-steps-adding-advanced-functionality)
 
-#### Summary ####
+### Summary ###
 
-#### New Features ####
+In this post, we expand on the groundwork laid by the previous blog post - located [here.](2023-12-22-adding-flask-functionality.md).
 
-#### Part 1: showing previous form entries ####
+The focus will be on adding index pages that allow the user to see previously added form entries, and tags.
 
-#### Part 2: showing previous tags ####
+Then, we will create a simple form that allows a user to add new feeling categories to be used in future form entries.
 
-#### Part 3: Adding feeling categories ####
+Last of all, we will implement a site-wide search functionality by updating the base.html template.
 
-#### Part 4: Adding global search functionality ####
+### Part 1: showing previous form entries ###
 
-#### Next Steps: Adding Advanced Functionality ####
+### Part 2: showing previous tags ###
+
+### Part 3: Adding feeling categories ###
+
+### Part 4: Adding global search functionality ###
+
+### Next Steps: Adding Advanced Functionality ###
