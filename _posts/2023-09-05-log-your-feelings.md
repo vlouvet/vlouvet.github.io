@@ -436,6 +436,6 @@ With this command running, our python application is being served on port 5001 a
 
 This blog will expand on the functionality of the Flask application in a separate post.
 
-If you are interested to learn how to dockerize, deploy, and maintain this application on a production server, visit our docker blog post [here.](2023-08-10-dev-setup-guide.md)
+If you are interested to learn how to dockerize, deploy, and maintain this application on a production server, visit our docker blog post [here.](/2023/8/10/dev-setup-guide)
 
 [Back to top](#daily-feeling-tracker-app-development-guide)
