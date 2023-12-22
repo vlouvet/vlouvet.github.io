@@ -12,7 +12,7 @@
 
 ### Summary ###
 
-In this post, we expand on the groundwork laid by the previous blog post - located [here.](2023-12-22-adding-flask-functionality.md).
+In this post, we expand on the groundwork laid by the previous blog post - located [here.](adding-flask-functionality.md)
 
 The focus will be on adding index pages that allow the user to see previously added form entries, and tags.
 
