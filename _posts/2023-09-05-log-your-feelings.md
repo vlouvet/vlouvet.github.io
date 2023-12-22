@@ -321,13 +321,13 @@ Create a file 'base.html' in the templates folder folder example: /dft/templates
 
 The contents of the base.html file should be as follows:
 
-[base.html](base.html)
+[base.html](/supplementary/base.html)
 
 Create a file 'form.html' in the templates folder folder example: /dft/templates/form.html
 
 The template file should contain the following code:
 
-[form.html](form.html)
+[form.html](/supplementary/form.html)
 
 As you can see, Jinja allows passing and rendering variables from the python code in HTML which is then consumed by a web browser.
 
