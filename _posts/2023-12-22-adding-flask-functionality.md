@@ -47,7 +47,7 @@ Most of the template is similar to other templates we've created previously (ex:
             <td>{{ entry.id }}</td>
             <td>{{ entry.rating }}</td>
             <td>{{ entry.message }}</td>
-            <td>{% for tag in entry.tags %}{{ tag.name }}{% endfor %}</td>
+            <td>{ % for tag in entry.tags % }{{ tag.name }}{ % endfor % }</td>
             <td>{{ entry.timestamp }}</td>
         </tr>
         {% endfor %}
