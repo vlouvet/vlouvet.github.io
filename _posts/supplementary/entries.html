@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div class="container mt-4">
+        <ul class="alert alert-danger">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+{% endwith %}
+<div class="container mt-4">
+<h1>Form Entries</h1>
+<form action="/search" method="post">
+    <div class="form-group">
+      <label for="query">Search</label>
+      <input type="text" class="form-control" id="query" name="query" placeholder="Enter search query">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>          
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Rating</th>
+            <th>Message</th>
+            <th>Tags</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.id }}</td>
+            <td>{{ entry.rating }}</td>
+            <td>{{ entry.message }}</td>
+            <td>{% for tag in entry.tags %}{{ tag.name }}{% endfor %}</td>
+            <td>{{ entry.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/" class="btn btn-primary">Add new entry</a>
+</div>
+{% endblock %}
