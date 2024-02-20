@@ -55,7 +55,7 @@ Most of the template is similar to other templates we've created previously (ex:
 </table>
 ```
 
-The magic in the code above comes from the block that starts ```{% for entry in entries %}```
+The magic in the code above comes from the block that starts ``` for entry in entries ```
 
 Passing a list of entries from our backend application code into the template, items on the list (in this case entries) are rendered dynamically by the Jinja templating engine.
 
