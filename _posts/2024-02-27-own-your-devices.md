@@ -39,6 +39,9 @@ Here is a breakdown of the network hardware used:
     - PoE switch: 5 Port PoE Gigabit NETGEAR Ethernet Plus Switch GS305EP
 3. Wifi Equipment - 
     - Access Points: TL-WA1201 - two units installed in opposite ends of property
+4. Uninterruptible Power Supply (UPS) - 
+    - APC Battery Backup BX850M
+    - Future models will drop support for power management tools through USB for a proprietary version, YMMV.
 
 Here is a breakdown of the network software used:
 
