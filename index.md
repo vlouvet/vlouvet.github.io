@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dynamic Links Example
+title: Vlouvet3 Technical Blog
 ---
 
 <link rel="shortcut icon" type="image/png" href="/docs/assets/favicon.ico">
