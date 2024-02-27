@@ -11,6 +11,6 @@ Here are some dynamically generated links to posts:
 
 <ul>
 {% for post in site.posts %}
-  <li>{{site.date}} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+  <li><a href="{{ post.url }}">{{site.date}}-{{ post.title }}</a></li>
 {% endfor %}
 </ul>
