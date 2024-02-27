@@ -15,21 +15,32 @@ This is a list of requirements that must be met in order for the infrastructure 
 2. Seamless roaming between access points anywhere on 1/3rd acre property.
 3. Ability to disconnect clients manually, or on a schedule.
 4. No subscription or cloud-based services required.
+5. provide reliable 802.11AC speeds to up to 20 clients
+6. Adblocking for all LAN clients
+7. Network hardware devices powered by UPS to prevent dropouts when power goes out.
 
 This is a list of features that were desired, but not required:
 
 1. Collect, graph and analyze Lan, Wifi, and WAN traffic.
-2. Fast (under 5 minutes) AP replacements.
-3. Devices follow the unix philosophy "Do one thing, do it well"
+2. Fast (under 5 minutes) hardware device replacements.
+3. Hardware devices follow the unix philosophy "Do one thing, do it well".
+4. Stream three 4K 10mBit videos from Jellyfin concurrently.
+5. Access Points are powered via PoE to reduce wiring during installs.
 
 
 Here is a breakdown of the network hardware used:
 
 1. Router/Firewall - 
-
+    - HP ProDesk 400 G3
+    - Hardware Specs: Intel i3-6100, 4GB ddr4, IBM 00E0838 Quad Port 1Gb Network Adapter Card
+    - using SFF instead of MicroPC for easy installation of Network Adapter card
 2. Ethernet Switching - 
-    - Gigabit Switch:
-    - PoE switch:
+    - Gigabit Switch: 16 Port Gigabit NETGEAR ProSafe GS116 v2
+    - PoE switch: 5 Port PoE Gigabit NETGEAR Ethernet Plus Switch GS305EP
 3. Wifi Equipment - 
-    - Access Point:
-    
+    - Access Points: TL-WA1201 - two units installed in opposite ends of property
+
+Here is a breakdown of the network software used:
+
+1. Firewall OS - OPNSense 24.x [(Link)](https://opnsense.org/)
+2. Wifi AP OS - OpenWrt 24.x [(Link)](https://openwrt.org/)
